@@ -1,0 +1,15 @@
+version: 3.9
+services:
+  backend:
+    name: django
+    image: virajthorat776/django
+    ports:
+      - 8001:8001
+  
+  database:
+    name: mysql_database
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD: test@123
+    ports:
+      - 3306:3306_
