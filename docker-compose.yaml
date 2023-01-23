@@ -5,3 +5,10 @@ services:
     ports:
       - "8001:8001"
   
+  database:
+    image: mysql
+    environment:
+      - VAR1=${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+
