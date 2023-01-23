@@ -1,13 +1,11 @@
 version: "3.9"
 services:
   backend:
-    name: django
     image: virajthorat776/django-todo-test
     ports:
       - "8001:8001"
   
   database:
-    name: mysql_database
     image: mysql
     environment:
       - VAR1=${MYSQL_ROOT_PASSWORD}
