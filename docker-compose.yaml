@@ -1,14 +1,9 @@
-version: "3.9"
+
+version: '3.9'
+
 services:
-  backend:
-    image: virajthorat776/django-todo-test
+  web:
+    build: .
     ports:
       - "8001:8001"
-  
-  database:
-    image: mysql
-    environment:
-      - VAR1=${MYSQL_ROOT_PASSWORD}
-    ports:
-      - "3306:3306"
 
