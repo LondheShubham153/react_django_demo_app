@@ -16,7 +16,7 @@ pipeline {
         stage('push') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubPassword', usernameVariable: 'dockerhubUser')]) {
-                sh 'docker login -u $(env.dockerhubUser) -p $(env.dockerhubPassword)'
+                sh "docker login -u $(env.dockerhubUser) -p $(env.dockerhubPassword)"
                 sh 'docker push gunjankanojia/react_django_demo_app:latest'
                 }
             }
