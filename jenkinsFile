@@ -19,8 +19,7 @@ pipeline {
 			sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                 	sh 'docker push gunjankanojia/react_django_demo_app:latest'
 			}
-                }
-            }
+            	}
         }
         stage('Deploy') {
             steps {
